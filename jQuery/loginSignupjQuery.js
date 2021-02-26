@@ -6,7 +6,7 @@ $(document).ready(function () {
         userCheck();//checked it again...
     });
 
-    //$(".heading header").animate({fontSize:"2.5vw"},2000);//animate header value(carsworld.com) by increasing size
+    $(".heading header").animate({fontSize:"2.5vw"},0);//animate header value(carsworld.com) by increasing size
 });
 
 function userCheck() {
