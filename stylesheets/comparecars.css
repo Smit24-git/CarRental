@@ -1,0 +1,166 @@
+ /*car list as a grid*/
+ .carList {
+     display: grid;
+     grid-template-columns: 25% 25% 25% 25%;
+ }
+
+ /*grid elemets*/
+ .car {
+     text-align: center;
+     background-color: darkseagreen;
+     margin: 1vw;
+     border-radius: 1vw;
+     font-size: 1.3vw;
+     padding: 1vw;
+     position: relative;
+     /*            top: -1;*/
+ }
+
+ .car:hover {
+     display: inline-block;
+     transform: scale(1.1);
+     /*scale on hover*/
+     cursor: pointer;
+     /*cursor to pointer on hover*/
+     box-shadow: 8px 0px 8px 0px rgba(143, 188, 139, 0.6);
+     /*            font-weight: bolder;*/
+     z-index: 1;
+
+ }
+
+ .car-data {
+     display: none;
+     /*hide car details*/
+     position: absolute;
+     background-color: beige;
+     min-width: 160px;
+     /*    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);*/
+     z-index: 20;
+     width: 100%;
+     left: 0;
+
+     overflow: auto;
+     margin-top: 1vw;
+     border-radius: 1vw;
+ }
+
+ .car:hover .car-data {
+     display: block;
+     /*show car details*/
+
+
+ }
+
+ .car:hover {
+     border: 1px solid;
+     box-shadow: inset 0 0 20px rgba(255, 255, 255, .5), 0 0 20px rgba(255, 255, 255, .2);
+     /*shadowing inside of div box*/
+     outline-color: rgba(255, 255, 255, 0);
+     /*            outline-offset: 15px;*/
+     /*  text-shadow: 1px 1px 2px #427388; */
+ }
+
+ .car table {
+     width: 100%;
+     margin: auto;
+     text-align: left;
+     font-size: 1vw;
+ }
+
+ .car span {
+     color: cyan;
+     font-size: 1vw;
+     font-weight: bolder;
+     text-align: center;
+ }
+
+ .car sub {
+     color: wheat;
+ }
+
+ .car h3 {
+     background-color: darkslategray;
+     margin-bottom: 0;
+     border-radius: 0vw 0vw 1vw 1vw;
+ }
+
+
+ .image-box {
+     position: relative;
+     margin: auto;
+     overflow: hidden;
+     width: 100%;
+     border-radius: 1vw 1vw 0vw 0vw;
+ }
+
+ .image-box img {
+     max-width: 100%;
+     transition: all 0.3s;
+     /*all transion to effect for 3 seconds*/
+     display: block;
+     width: 100%;
+     height: auto;
+     /*            transform: scale(1);*/
+ }
+
+ .image-box:hover img {
+     transform: scale(1.1);
+     /*scale image on hover*/
+ }
+
+ /*grid compare window*/
+ .compareWindow {
+     display: grid;
+     grid-template-columns: 49% 2% 49%;
+     width: 100%;
+     margin: auto;
+ }
+
+ .compareCar {
+     background-color: dimgrey;
+     margin: 1vw;
+     color: azure;
+     border-radius: 3vw;
+     padding-bottom: 1vw;
+ }
+
+ .compareCar img {
+     width: 90%;
+     border-radius: 1vw;
+     height: 20vw;
+ }
+
+ .compareCar table {
+     width: 80%;
+     margin: auto;
+     font-size: 1.5vw;
+ }
+
+ .compareCar tr th {
+     text-align: right;
+     width: 50%
+ }
+
+ .compareCar tr td {
+     text-align: left;
+     padding-left: 1vw;
+     width: 50%;
+ }
+
+ .red {
+     color: orange;
+ }
+
+ .green {
+     color: rgb(144, 238, 144);
+     font-weight: bold;
+     /*bold text*/
+ }
+
+ @media only screen and (max-width:800px) {
+
+     /*when screen size is within 800px*/
+     .carList {
+         grid-template-columns: 33% 33% 33%;
+     }
+ }

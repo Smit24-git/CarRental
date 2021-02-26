@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Rent Car</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Rent Your Car Here.">
+    <meta name="keywords" content="Cars, Rent, Old, Used, travel, long drive, drive">
+    <meta name="author" content="Smit Shah">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<!--    css for common layout-->
+    <link rel="stylesheet" href="../stylesheets/layout.css" />
+<!--    css for this page-->
+    <link rel="stylesheet" href="../stylesheets/rentcar.css" />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<!--    <script src="../js/setdata.js"></script>    -->
+<!--    script for login and sign up checks-->
+    <script src="../jQuery/loginSignupjQuery.js"></script>
+    <script>
+     
+    </script>
+<!--    internal css-->
+    <style>
+/*        custom popup menu will be hidden initially and will be appeared when user click  on the button*/
+        .custom{
+            display: inline-block;
+            position: fixed;
+/*            position on the screen*/
+            top: 25%;
+            left: 25%;
+            width: 50%;
+            height: 25vw;
+            background-color: white;
+            z-index: 5;/*set to top of other view*/
+            display: none;
+            text-align: center;
+            border-radius: 5vw;
+            
+        }
+/*        make a view blue*/
+        .blur
+        {
+            filter: blur(5px);
+        }
+/*
+        .custom:hover + nav
+        {
+            filter: blur(5px);
+        }
+        .custom:hover ~ .Wrapper{
+            filter: blur(5px);
+        }
+*/
+/*        set size of image in the custom*/
+        .custom img{
+            width: 50%;
+            height: 50%;
+            margin: auto;
+        }
+    </style>
+    <script>
+        //code for search n display
+        /* when document(page) is ready */
+        $(document).ready(function(){
+            //event on key up pressed
+          $("#search").on("keyup", function() {
+            var value = $(this).val().toLowerCase();/*lower case to acheive case sensitivity*/
+            $(".cars .car").filter(function() {//filter the car based on search value
+              $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)//filter out the cars by toggling it
+            });
+          });
+        });
+    </script>
+</head>
+
+<body>
+<!--    header of page -->
+    <div class="heading">
+        <img src="../images/logo.PNG">
+        <header>CarsWorld.com</header>
+        <div class="login-main">
+            <button class="login-button">Login</button>
+            <div class="login-sub">
+                <a id="login" href="Login.html">Login</a>
+                <a id="signup" href="Signup.html">Sign Up</a>
+                <a id="logout" href="">Log Out</a>
+            </div>
+        </div>
+    </div>
+<!--    custom layout that only appears when user choose to rent a car-->
+    <div class="custom">
+        <h2>Car Name</h2>
+        <img src="../images/cars/AcuraRLX.png"/><br/>
+        <p>Are you sure you want to rent this car?</p>
+        <button onclick="confirm()"> Yes</button>
+        <button onclick="hideCustom()"> No </button>        
+    </div>
+<!--    left navigation pane-->
+    <nav id="nav">
+        <div>
+            <img src="../images/home.png" />
+            <a href="Index.html">Home</a>
+        </div>
+        <div>
+            <img src="../images/view.jpg" />
+            <a href="ViewCarCollection.html">View Car Collection</a>
+        </div>
+        <div>
+            <img src="../images/compare.png" />
+            <a href="CompareCars.html">Compare Cars</a>    
+        </div>
+        <div class="active">
+            <img src="../images/rent.png" />
+            <a href="RentACar.html">Rent a Car</a>
+        </div>
+<!--
+        <div>
+            <img src="../images/visit1.png"/>
+            <a href="">Visit Us</a>
+        </div>
+-->
+          <div>
+            <img src="../images/visit1.png"/>
+            <a href="DrivingTest.html">Driving Test [Required]</a>
+        </div>
+        
+<!--
+        <hr>
+        <center><b>Admin</b></center>
+        <hr>
+        <div>
+            <img src="../images/add.png"/>
+            <a href="">Add Car</a>
+        </div>
+        <div>
+            <img src="../images/update.png" />
+            <a href="">Update Car Collection</a>
+        </div>
+-->
+        
+    </nav>
+<!-- wrapper div wrapping main and other layout    -->
+    <div class="Wrapper" id="Wrapper">
+<!--        main div containing main data displays in the center-->
+        <div class="main">
+            
+            <h1 style="margin-top: 0">Rent Car</h1>
+            <div class="search">
+                <img src="https://img.icons8.com/pastel-glyph/64/000000/search--v2.png" />
+                <input type="text" id="search" />
+            </div>
+<!--            select statement-->
+            <div class="filters">
+<!--                <label>Sort By:</lebel>-->
+                <div class="select">
+                    <select id="sort" onchange="sorting(this);">
+                        <option>Sort By:</option>
+                        <option>Name A-Z</option>
+                        <option>Name Z-A</option>
+                        <option>Rent &#8593</option>
+                        <option>Rent &#8595</option>
+                    </select>
+                </div>
+            </div>
+<!--            this div will have other child divs generated by javascript-->
+            <div class="cars">
+            </div>
+           
+            
+        </div>
+<!--        advt on right side of the screen-->
+        <aside>
+            <img src="../images/advt/adv1.gif" />
+        </aside>
+    </div>
+<!--    footer on bottom of the site-->
+    <footer>
+        <div id="data_div">
+            <div class="col">
+                <ul>
+                    <caption>Contact Us:</caption>
+                    <li>1800 200 300</li>
+                    <li>carsworlds@gmail.com</li>
+                    <li>twitter/143235</li>
+                </ul>
+            </div>
+            <div class="col feedback">
+                <h3>Feedbacks:</h3>
+<!--                rating stylesheet imported from cloudflair.com-->
+
+                <span class="fa fa-star checked" ></span>
+                <span class="fa fa-star checked" ></span>
+                <span class="fa fa-star checked" ></span>
+                <span class="fa fa-star checked" ></span>
+                <span class="fa fa-star" ></span>
+                <p style="padding: 0px;margin: 0px">28k reviews</p>
+            </div>
+        </div>
+    </footer>
+</body>
+<!--    set data if not exists-->
+    <script src="../js/setdata.js"></script>
+<!--    script or this page-->
+    <script src="../js/RentACar.js"></script>
+    
+
+</html>

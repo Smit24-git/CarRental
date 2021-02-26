@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Sign Up</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="SignUp CarsWorld.">
+    <meta name="keywords" content="Cars, Rent, Old, Used, travel, long drive, drive">
+    <meta name="author" content="Smit Shah">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../stylesheets/layout.css" />
+    <link rel="stylesheet" href="../stylesheets/signup.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="../jQuery/SignUp.js"></script>
+   
+</head>
+
+<body>
+<!--    header on top of the page-->
+    <div class="heading">
+<!--        logo-->
+        <img src="../images/logo.PNG">
+        
+        <header style="font-size: 2.5vw">CarsWorld.com</header>
+        <div class="login-main">
+            <button class="login-button">Login</button>
+            <div class="login-sub">
+                <a href="Login.html">Login</a>
+                <a href="">Sign Up</a>
+            </div>
+        </div>
+    </div>
+<!--    navigation pane displays on left side-->
+    <nav>
+        <div>
+            <img src="../images/home.png" />
+            <a href="Index.html">Home</a>
+        </div>
+        <div>
+            <img src="../images/view.jpg" />
+            <a href="ViewCarCollection.html">View Car Collection</a>
+        </div>
+        <div>
+            <img src="../images/compare.png" />
+            <a href="CompareCars.html">Compare Cars</a>
+        </div>
+        <div>
+            <img src="../images/rent.png" />
+            <a href="RentACar.html">Rent a Car</a>
+        </div>
+<!--
+        <div>
+            <img src="../images/visit1.png" />
+            <a href="">Visit Us</a>
+        </div>
+-->
+        <div>
+            <img src="../images/visit1.png"/>
+            <a href="DrivingTest.html">Driving Test [Required]</a>
+        </div>
+
+<!--
+        <hr>
+        <center><b>Admin</b></center>
+        <hr>
+        <div>
+            <img src="../images/add.png" />
+            <a href="">Add Car</a>
+        </div>
+        <div>
+            <img src="../images/update.png" />
+            <a href="">Update Car Collection</a>
+        </div>
+-->
+
+    </nav>
+<!--    wrapper div wrapping 2 sections- main and aside-->
+    <div class="Wrapper">
+<!--        contains all main data displayed in center of the screen-->
+        <div class="main">
+<!--            form signup. when submitted successfully, it will jump to login page-->
+            <form method="post" target="_self" action="Login.html" class="signupWindow">
+                <h1>Create Your Account</h1>
+                <input value="" type="text" placeholder="Username*" id="username" title="username" required />
+<!--                pattern to have email only-->
+                <input value="" type="email" placeholder="Email Id*" id="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" title="characters@characters.domain" required /><br>
+
+                <input value="" type="text" placeholder="Pin code*" id="pin" title="pincode" required />
+                <input value="" type="text" placeholder="Enter city*" id="city" title="enter city" required /><br>
+<!--                patern to have no in specified format-->
+                <input value="" type="tel" placeholder="Mobile No*" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" id="phno" title="Ex. 123-123-1234" required /><br>
+<!--              password with at least 8 chars having cap small lettets and digits  -->
+                <input value="" type="password" placeholder="Password*" id="pass" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one  number and one uppercase and lowercase letter, and at least 8 or more characters" required />
+                <input value="" type="password" placeholder="Retype Password*" id="repass" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one  number and one uppercase and lowercase letter, and at least 8 or more characters" required /><br>
+
+                <input type="submit" id="signup" value="Create" />
+            </form>
+            <br>
+            <br>
+            <label>Already have an account?</label><a href="Login.html" title="Login">Click here</a>
+        </div>
+<!--        advt-->
+        <aside>
+            <img src="../images/advt/adv1.gif" />
+        </aside>
+    </div>
+    <footer>
+        <div id="data_div">
+            <div class="col">
+                <ul>
+                    <caption>Contact Us:</caption>
+                    <li>1800 200 300</li>
+                    <li>carsworlds@gmail.com</li>
+                    <li>twitter/143235</li>
+                </ul>
+            </div>
+            <div class="col feedback">
+                <h3>Feedbacks:</h3>
+                <!--                rating stylesheet imported from cloudflair.com-->
+
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star"></span>
+                <p style="padding: 0px;margin: 0px">28k reviews</p>
+            </div>
+        </div>
+    </footer>
+    <script>
+
+    </script>
+</body>
+
+
+</html>

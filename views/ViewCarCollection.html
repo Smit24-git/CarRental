@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>View Cars</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="View Our Car Collection Here.">
+    <meta name="keywords" content="Cars, Rent, Old, Used, travel, long drive, drive">
+    <meta name="author" content="Smit Shah">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../stylesheets/layout.css"/>
+    <link rel="stylesheet" href="../stylesheets/viewcarcollection.css"/>
+<!--    set data-->
+    <script src="../js/setdata.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<!-- login and signup checks-->
+    <script src="../jQuery/loginSignupjQuery.js"></script>
+<script>
+    $(function(){
+        
+//        $(".car").slideUp(000);
+        //slide down cars in 4 secs
+        $(".car").slideDown(4000);
+    });
+    </script>
+</head>
+
+<body>
+<!--    header of site-->
+    <div class="heading">
+        <img src="../images/logo.PNG">
+        <header>CarsWorld.com</header>
+        <div class="login-main">
+            <button class="login-button">Login</button>
+            <div class="login-sub">
+                <a id="login" href="Login.html">Login</a>
+                <a id="signup" href="Signup.html">Sign Up</a>
+                <a id="logout" href="">Log Out</a>
+            </div>
+        </div>
+    </div>
+<!--    navigation panel-->
+    <nav>
+        <div>
+            <img src="../images/home.png" />
+            <a href="Index.html">Home</a>
+        </div>
+        <div class="active">
+            <img src="../images/view.jpg" />
+            <a href="ViewCarCollection.html">View Car Collection</a>
+        </div>
+        <div>
+            <img src="../images/compare.png" />
+            <a href="CompareCars.html">Compare Cars</a>    
+        </div>
+        <div>
+            <img src="../images/rent.png" />
+            <a href="RentACar.html">Rent a Car</a>
+        </div>
+<!--
+        <div>
+            <img src="../images/visit1.png"/>
+            <a href="">Visit Us</a>
+        </div>
+-->
+          <div>
+            <img src="../images/visit1.png"/>
+            <a href="DrivingTest.html">Driving Test [Required]</a>
+        </div>
+        
+<!--
+        <hr>
+        <center><b>Admin</b></center>
+        <hr>
+        <div>
+            <img src="../images/add.png"/>
+            <a href="">Add Car</a>
+        </div>
+        <div>
+            <img src="../images/update.png" />
+            <a href="">Update Car Collection</a>
+        </div>
+-->
+        
+    </nav>
+<!--    wrapper class wrapping maincontent and aside advts-->
+    <div class="Wrapper">
+        <div class="main">
+            <h1>Our Car Collection</h1>
+<!--            div cars containing car objects(div)-->
+            <div class="cars">
+<!--                have car details-->
+            </div>
+        </div>
+        <aside>
+            <img src="../images/advt/adv1.gif" />
+        </aside>
+    </div>
+    <footer>
+        <div id="data_div">
+            <div class="col">
+                <ul>
+                    <caption>Contact Us:</caption>
+                    <li>1800 200 300</li>
+                    <li>carsworlds@gmail.com</li>
+                    <li>twitter/143235</li>
+                </ul>
+            </div>
+            <div class="col feedback">
+                <h3>Feedbacks:</h3>
+<!--                rating stylesheet imported from cloudflair.com-->
+
+                <span class="fa fa-star checked" ></span>
+                <span class="fa fa-star checked" ></span>
+                <span class="fa fa-star checked" ></span>
+                <span class="fa fa-star checked" ></span>
+                <span class="fa fa-star" ></span>
+                <p style="padding: 0px;margin: 0px">28k reviews</p>
+            </div>
+        </div>
+    </footer>
+</body>
+<!--   set data if not exists-->
+    <script src="../js/setdata.js"></script>
+<!--    script for this page. display cars dynamically-->
+    <script src="../js/ViewCarCollection.js"></script>
+   
+
+   
+</html>

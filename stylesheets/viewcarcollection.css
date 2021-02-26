@@ -1,0 +1,96 @@
+/*main grid layout*/
+.cars {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    padding: 10px;
+    margin-bottom: 1vw;
+}
+
+/*            Setting child layout of grid layout*/
+.car {
+    text-align: center;
+    background-color: darkseagreen;
+    margin: 1vw;
+    border-radius: 1vw;
+}
+
+.car:hover {
+    box-shadow: 16px 8px 16px 8px rgba(0, 0, 0, 0.6);
+    transform: scale(1.1);
+    /*scale it to 1.1 (zoom it)*/
+}
+
+.cars img {
+    width: 15vw;
+    border-radius: 2vw;
+    height: 10vw;
+}
+
+header {
+    font-family: cursive;
+    font-size: 1.5vw;
+}
+
+table {
+    width: 15vw;
+    margin: auto;
+    text-align: left;
+}
+
+h3 span {
+    color: cyan;
+    font-size: 2vw;
+    font-weight: bolder;
+    text-align: center;
+}
+
+sub {
+    color: wheat;
+}
+
+h3 {
+    background-color: darkslategray;
+    margin-bottom: 0;
+    border-radius: 0vw 0vw 1vw 1vw;
+}
+
+@media only screen and (max-width: 900px) {
+
+    /*when screen size decreased to 900px*/
+    .cars {
+        grid-template-columns: auto auto;
+    }
+}
+
+
+@media only screen and (max-width: 600px) {
+
+    /*when screen size decreased to 600px*/
+    .cars {
+        grid-template-columns: auto auto;
+    }
+
+    .cars img {
+        float: left;
+    }
+
+    table {
+        margin-left: 1vw;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+
+    /*when screen size decreased to 400px*/
+    .cars {
+        grid-template-columns: auto;
+    }
+
+    .cars img {
+        float: none;
+    }
+
+    table {
+        margin-left: auto;
+    }
+}

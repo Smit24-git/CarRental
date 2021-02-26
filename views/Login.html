@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    
+    <title>Login</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="CarsWorld Login.">
+    <meta name="keywords" content="Cars, Rent, Old, Used, travel, long drive, drive">
+    <meta name="author" content="Smit Shah">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<!--    general style layout-->
+    <link rel="stylesheet" href="../stylesheets/layout.css"/>
+<!--    style for this page-->
+    <link rel="stylesheet" href="../stylesheets/login.css"/>
+<!--    cdn jq.-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<!--    login and signn up checks-->
+<!--    script for this page-->
+    <script src="../jQuery/Login.js"></script>
+</head>
+
+<body>
+<!--    header of the site-->
+    <div class="heading">
+<!--        logo of the site-->
+        <img src="../images/logo.PNG">
+<!--        name of the site-->
+        <header style="font-size: 2.5vw">CarsWorld.com</header>
+        <div class="login-main">
+<!--            login button-->
+            <button class="login-button">Login</button>
+<!--            catagoties displays on hover of login button-->
+            <div class="login-sub">
+                <a href="">Login</a>
+                <a href="Signup.html">Sign Up</a>
+            </div>
+        </div>
+    </div>
+<!--    laft navigation pane-->
+    <nav>
+        <div>
+            <img src="../images/home.png" />
+            <a href="Index.html">Home</a>
+        </div>
+        <div>
+            <img src="../images/view.jpg" />
+            <a href="ViewCarCollection.html">View Car Collection</a>
+        </div>
+        <div>
+            <img src="../images/compare.png" />
+            <a href="CompareCars.html">Compare Cars</a>    
+        </div>
+        <div>
+            <img src="../images/rent.png" />
+            <a href="RentACar.html">Rent a Car</a>
+        </div>
+<!--
+        <div>
+            <img src="../images/visit1.png"/>
+            <a href="">Visit Us</a>
+        </div>
+-->
+          <div>
+            <img src="../images/visit1.png"/>
+            <a href="DrivingTest.html">Driving Test [Required]</a>
+        </div>
+        
+<!--
+        <hr>
+        <center><b>Admin</b></center>
+        <hr>
+        <div>
+            <img src="../images/add.png"/>
+            <a href="">Add Car</a>
+        </div>
+        <div>
+            <img src="../images/update.png" />
+            <a href="">Update Car Collection</a>
+        </div>
+-->
+        
+    </nav>
+<!--    wrapper class wrapping center div and aside part-->
+    <div class="Wrapper" id="Wrapper">
+<!--        center div-->
+        <div class="main">
+<!--            form for login, on slick it will navigate to index page if login info is correct-->
+            <form method="post" target="_self" action="Index.html" id="loginWindow" class="loginWindow">
+                <h1>Login</h1>
+                
+                <label for="username">User ID<sup style="color: red">*</sup>:</label><input type="text" id="username" onfocus="focus()" pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-z]{2,}$" title="characters@characters.domain" required/><br>
+                <label for="password">Password<sup style="color: red">*</sup>:</label><input type="password" id="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one  number and one uppercase and lowercase letter, and at least 8 or more characters" required/><br>
+                <input type="checkbox" id="admin"/><label for="admin">Admin</label> <br/>
+                <input type="submit" style="display:inherit" id="login" value="Login"/>
+            </form>
+            <br>
+            <br>
+            <label>Don't Have an account?</label><a href="Signup.html">Click here</a>
+        </div>
+        <aside>
+            <img src="../images/advt/adv1.gif" />
+        </aside>
+    </div>
+    <footer>
+        <div id="data_div">
+                        
+            <div class="col">
+                <ul>
+                    <caption>Contact Us:</caption>
+                    <li>1800 200 300</li>
+                    <li>carsworlds@gmail.com</li>
+                    <li>twitter/143235</li>
+                </ul>
+            </div>
+            <div class="col feedback">
+<!--                rating stylesheet imported from cloudflair.com-->
+                <h3>Feedbacks:</h3>
+
+                <span class="fa fa-star checked" ></span>
+                <span class="fa fa-star checked" ></span>
+                <span class="fa fa-star checked" ></span>
+                <span class="fa fa-star checked" ></span>
+                <span class="fa fa-star" ></span>
+                <p style="padding: 0px;margin: 0px">28k reviews</p>
+            </div>
+        </div>
+    </footer>
+</body>
+    <script>
+        
+    </script>
+   
+</html>

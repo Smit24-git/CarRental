@@ -1,0 +1,152 @@
+.search {
+    background-color: antiquewhite;
+    overflow: hidden;
+    width: 60%;
+    margin: auto;
+    border-radius: 2vw;
+    height: 3vw;
+    border-style: groove;
+
+}
+
+.search img {
+    float: left;
+    height: 100%;
+    width: 9%;
+}
+
+.search input[type=text] {
+    /*            top: 25%;*/
+    width: 90%;
+    height: 100%;
+    font-size: 1.5vw;
+    border: none;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    outline: none;
+    /*remove outline*/
+    background: none;
+    /*remove background*/
+}
+
+.cars {
+    margin-top: 2vw;
+}
+
+.car {
+    width: 80%;
+    margin: auto;
+    overflow: auto;
+    margin-top: 5vw;
+    padding: 2vw;
+    background-color: darkcyan;
+    border-radius: 2vw;
+    color: aliceblue;
+    display: none;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+
+}
+
+.car:hover {
+    transform: scale(1.1);
+    background-color: dimgrey;
+    box-shadow: 0px 16px 32px 0px rgba(0, 0, 0, 0.4);
+}
+
+.cars .car img {
+    float: left;
+    width: 25%;
+    border-radius: 1vw;
+    height: 10vw;
+
+}
+
+.cars .car h3 {
+    margin: 0vw;
+}
+
+table {
+    display: inline-block;
+    position: relative;
+    width: 35%;
+}
+
+table tr th,
+td {
+    text-align: left;
+}
+
+table tr td {
+    padding-left: 1vw;
+}
+
+.cars .car button {
+    float: right;
+    border-radius: 2vw;
+    font-size: 1.5vw;
+    outline: none;
+    padding: 0.5vw 3vw;
+    background-color: green;
+    color: aliceblue;
+    font-weight: bolder;
+    font-family: monospace;
+
+}
+
+.cars .car button:hover {
+    background-color: lightgreen;
+    color: black;
+}
+
+.red {
+    color: orange;
+    font-weight: bold;
+}
+
+.green {
+    color: lightgreen;
+    font-weight: bold;
+}
+
+select {
+    border-radius: 0.5vw;
+    padding: 0.5vw 2vw;
+    background-color: darkgray;
+    outline: none;
+    font-size: 1.1vw;
+}
+
+select option {
+    padding: 1vw;
+}
+
+.select {
+    position: relative;
+    display: flex;
+    overflow: hidden;
+    width: 30%;
+    height: 2.5vw;
+    border-radius: 0.5vw;
+    margin: 1vw;
+}
+
+select {
+    flex: 1;
+    cursor: pointer;
+}
+
+.select::after {
+    content: '\25BC';
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 3vw;
+    padding-top: 0.7vw;
+    background: #000;
+    cursor: pointer;
+    pointer-events: none;
+    color: white;
+    transition: .25s all easy;
+}

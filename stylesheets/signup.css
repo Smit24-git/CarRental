@@ -1,0 +1,67 @@
+input[type="submit"] {
+    margin: 1vw 2vw;
+    width: 10vw;
+    height: 2.2vw;
+    border-radius: 0.7vw;
+    font-size: 1.2vw;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    /*shadowing input type submit*/
+}
+
+input[type="submit"]:hover {
+
+    box-shadow: none;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="password"] {
+    background-color: whitesmoke;
+    height: 2vw;
+    border-radius: 0.4vw;
+    margin: 1vw 0.5vw;
+    width: 13vw;
+    border-style: inherit;
+    padding-left: 1vw;
+    border-color: gray;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus {
+    background-color: white;
+
+}
+
+input[type="text"]:hover,
+input[type="email"]:hover,
+input[type="password"]:hover {
+    background-color: white;
+
+}
+
+.signupWindow h1 {
+    font-family: cursive;
+
+}
+
+#phno {
+    width: 80%;
+}
+
+.signupWindow {
+/*    margin-top: 5%;*/
+    display: inline-block;
+    padding: 1vw 4vw;
+    background-color: burlywood;
+    font-family: monospace;
+    border-radius: 3vw;
+/*
+    width: 0;
+    height: 0;
+*/
+/*    display: none;*/
+}
+
+

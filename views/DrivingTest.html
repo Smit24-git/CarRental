@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>CarsWorld.com</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="About Cars World Company.">
+    <meta name="keywords" content="Cars, Rent, Old, Used, travel, long drive, drive">
+    <meta name="author" content="Smit Shah">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../stylesheets/layout.css" />
+    <link rel="stylesheet" href="../stylesheets/index.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <script src="../js/setdata.js"></script>
+    <script src="../jQuery/loginSignupjQuery.js"></script>
+    <script src="../jQuery/DrivingTest.js"></script>
+<!--    Internal CSS-->
+    <style>
+/*       css for panel and flip divisions*/
+        #panel,
+        #flip {
+            padding: 5px;
+            font-size: 18px;
+            text-align: center;
+            background-color: #555;
+            color: white;
+            border: solid 1px #666;
+            border-radius: 3px;
+            width: 20%;
+        }
+/*hidden panel*/
+        #panel {
+            font-size: 30px;
+            padding: 5px;
+            display: none;/*hides panel in initial stage*/
+            float: right;/*displays right side of the screen*/
+            height: 40px;
+            font-family: fantasy;
+            font-weight: 400;/*makes font bold */
+            letter-spacing: 2px;/*spacing between letters*/
+        }
+/*flip to be hidden until user finish the test*/
+        #flip {
+            display: none;/*hide div*/
+            float: right;/*moves to the right*/
+        }
+        /*desiging to all buttons to control the game*/
+        #show,
+        #fade,
+        #run,
+        #stop,
+        #restart,
+        #retake {
+            width: 100px;
+            background-color: orange;
+            border-radius: 5px;
+            height: 30px;
+            font-weight: bold;
+
+        }
+        /*change color to orange when mouse hovers on the buttons*/
+        #show:hover,
+        #fade:hover,
+        #run:hover,
+        #stop:hover,
+        #retake:hover {
+            background-color: orangered;
+        }
+/*        hide fade and run buttons( start engine and lets go buttons )*/
+        #fade,
+        #run {
+
+            display: none;
+
+        }
+        /*set color to push accelator button*/
+        #restart {
+            background-color: darkturquoise;
+            width: 150px;
+        }
+/*       change color on button hover*/
+        #restart:hover {
+            background-color: aquamarine;
+
+        }
+
+    </style>
+</head>
+
+<body>
+<!--    main heading -->
+    <div class="heading">
+<!--        logo-->
+        <img src="../images/logo.PNG">
+<!--        site name-->
+        <header>CarsWorld.com</header>
+<!--        login button div-->
+        <div class="login-main">
+<!--            login button-->
+            <button class="login-button">Login</button>
+            <div class="login-sub">
+<!--                moves to login page-->
+                <a id="login" href="Login.html">Login</a>
+<!--                navigate to signup page-->
+                <a id="signup" href="Signup.html">Sign Up</a>
+<!--                logout from the site-->
+                <a id="logout" href="">Log Out</a>
+            </div>
+        </div>
+    </div>
+<!--    left navigation pane-->
+    <nav>
+        <div>
+            <img src="../images/home.png" />
+            <a href="Index.html">Home</a>
+        </div>
+        <div>
+            <img src="../images/view.jpg" />
+            <a href="ViewCarCollection.html">View Car Collection</a>
+        </div>
+        <div>
+            <img src="../images/compare.png" />
+            <a href="CompareCars.html">Compare Cars</a>
+        </div>
+        <div>
+            <img src="../images/rent.png" />
+            <a href="RentACar.html">Rent a Car</a>
+        </div>
+        <!--
+        <div>
+            <img src="../images/visit1.png"/>
+            <a href="">Visit Us</a>
+        </div>
+-->
+        <div class="active">
+            <img src="../images/visit1.png" />
+            <a href="DrivingTest.html">Driving Test [Required]</a>
+        </div>
+
+
+        <!--
+        <hr>
+        <center><b>Admin</b></center>
+        <hr>
+        <div>
+            <img src="../images/add.png"/>
+            <a href="">Add Car</a>
+        </div>
+        <div>
+            <img src="../images/update.png" />
+            <a href="">Update Car Collection</a>
+        </div>
+-->
+
+    </nav>
+    <!--    wrapper contains main and aside-->
+    <div class="Wrapper">
+        <!--        Main contains main body elements-->
+        <div class="main">
+
+            <!--            <h2 style="margin: 0;"> Driving EXAM...</h2>-->
+            <div class="frm" style="position: relative">
+                <img id="track" src="../images/track.jpg" style=" position: relative;" width="100%" height="400px" />
+                <img id="car" src="../images/car.png" style="display: none; position: absolute;z-index: 10; left: 10px; top: 280px" width="200px" height="100px" />
+                <img id="kid" src="../images/kid.png" style="display: none; position: absolute;z-index: 10; top: 250px" width="100px" height="120px" />
+            </div>
+            <p id="userText"></p>
+<!--            panel for desplaying result-->
+            <div id="flip">Click To View The Result</div>
+            <div id="panel"></div>
+<!--            controls to control the car-->
+            <div class="ctrls">
+                <button id="show">Get CAR</button>
+                <button id="fade">Start Engine</button>
+                <button id="run">Lets Go!!!</button>
+                <button id="stop" style="display: none">Stop!!!</button>
+                <button id="restart" style="display: none">Push Accelerator</button>
+            </div>
+            <br /><br />
+<!--            re-call the same page on click -->
+            <button style="display: none" id="retake" onclick="location='DrivingTest.html'">Re-Take</button>
+
+        </div>
+<!--        advt-->
+        <aside>
+            <img src="../images/advt/adv1.gif" />
+        </aside>
+    </div>
+<!--    footer layout-->
+    <footer>
+        <div id="data_div">
+            <div class="col">
+                <ul>
+                    <caption>Contact Us:</caption>
+                    <li>1800 200 300</li>
+                    <li>carsworlds@gmail.com</li>
+                    <li>twitter/143235</li>
+                </ul>
+            </div>
+            <div class="col feedback">
+                <h3>Feedbacks:</h3>
+                <!--                rating stylesheet imported from cloudflair.com-->
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star"></span>
+                <p style="padding: 0px;margin: 0px">28k reviews</p>
+            </div>
+        </div>
+    </footer>
+</body>
+
+
+</html>

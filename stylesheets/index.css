@@ -1,0 +1,54 @@
+/*style on image of table*/
+table tr td img {
+    width: 10vw;
+    height: 8vw;
+    margin-bottom: 5vw;
+}
+
+table {
+    width: 80%;
+    margin: auto;
+}
+
+.best {
+    width: 100%;
+    height: 15vw;
+    /*            perspective: 600px;*/
+    padding-bottom: 5vw;
+}
+
+.car {
+    width: 40%;
+    height: 100%;
+    margin: auto;
+    display: inline-block;
+    position: relative;
+    transition: transform 2s;/* takes 2 seconds to rotate*/
+    transform-style: preserve-3d;/*to have 3d transform from front to back*/
+
+}
+
+.front {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    backface-visibility: hidden;/*hide the backside*/
+}
+
+.back {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    backface-visibility: hidden;/*hide the back side*/
+    transform: rotateY(180deg);/*to make contents backside of the car image*/
+}
+
+.car:hover {
+    transform: rotateY(180deg);/*rotate to 180 degree in y axis*/
+}
+
+.car img {
+    width: 20vw;
+    height: 14vw;
+    border-radius: 1vw;
+}

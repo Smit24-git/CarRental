@@ -1,0 +1,235 @@
+body {
+    /*            background-color: cadetblue;*/
+    font-size: 1.2vw;
+    background-color: gainsboro;
+}
+/*---------heading------------*/
+div.heading {
+    background-color: rgb(177, 206, 207);
+    /*    overflow: auto;*/
+    margin-top: 0px;
+    padding-top: 0px;
+    position: fixed;
+    /*will not move on scroll*/
+    width: 100%;
+    height: 8vw;
+    top: 0px;
+    z-index: 10;
+    /*top of every elements*/
+
+}
+
+div.heading > img {
+    width: 20vw;
+    height: 8vw;
+    float: left;
+}
+
+div.heading > header {
+    display: inline-block;
+    margin-top: 2.5vw;
+/*    font-size: 2.5vw;*/
+    font-size: 0vw;
+}
+
+.login-button {
+    background-color: whitesmoke;
+    color: black;
+    padding: 1vw 1.5vw;
+    font-size: 1.2vw;
+    border: none;
+    cursor: pointer;
+    /*cursor as a pointer*/
+    border-radius: 0.5vw;
+}
+
+.login-main {
+    display: inline-block;
+    padding: 0.2vw .5vw;
+    float: right;
+    margin: 2vw;
+    margin-right: 3vw;
+    text-decoration: none;
+    background-color: aliceblue;
+    border-radius: 0.5vw;
+    position: relative;
+}
+
+.login-sub {
+    display: none;
+    /*hide on initial phase*/
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    /*shadowing the box*/
+    z-index: 1;
+    right: 0;
+}
+
+.login-sub a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.login-sub a:hover {
+    background-color: #f1f1f1;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    /*shadowing on hover*/
+}
+
+.login-main:hover .login-sub {
+    display: block;
+    /*show sub conntents of login*/
+
+}
+
+.login-main:hover .login-button {
+    background-color: dimgrey;
+    color: beige;
+
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+}
+
+/**********Navigation**************/
+nav {
+    display: inline-block;
+    box-shadow: 10px 10px 5px #aaaaaa;
+    width: 15%;
+    height: 100%;
+    top: 9vw;
+    background-color: #E8E8E8;
+    position: fixed;
+    /*fixed the position of navigation bar*/
+}
+nav >div{
+    margin: 1vw;
+/*    text-align: center;*/
+    color: darkslategrey;
+    padding: 1vw;
+}
+nav div > a {
+    
+    list-style-type: none;
+    list-style: none;
+    text-decoration: none;
+/*    text-align: center;*/
+    color: darkslategrey;
+    
+}
+
+nav > div:not(.active):hover {
+    background-color: antiquewhite;
+    color: black;
+    box-shadow: 10px 10px 5px #aaaaaa;
+    border-radius: 1vw;
+}
+nav div > img{
+    float: left;width: 2vw; height: 1.7vw; margin-right: 1vw;
+}
+.active {
+    background-color: bisque;
+    color: black;
+    box-shadow: 10px 10px 5px #aaaaaa;
+    border-radius: 1vw;
+}
+
+/*************Main  Div***********/
+
+.Wrapper {
+    margin-top: 9vw;
+    overflow: auto;
+}
+
+div.main {
+    display: inline-block;
+    float: left;
+    margin-left: 16%;
+    /*            margin-top: 9vw;*/
+    width: 68%;
+    height: 100%;
+    text-align: center;
+    margin-bottom: 1vw;
+}
+
+
+aside {
+    width: 16%;
+    margin-left: 84%;
+}
+
+aside > img {
+    /*to all images inside aside tag*/
+    margin-left: 1vw;
+    width: 60%;
+    display: block;
+    margin: auto;
+    margin-top: 1vw;
+    height: auto;
+}
+
+/*******Footer********/
+footer {
+
+    height: 10vw;
+    background-color: darkslategrey;
+    margin-left: 16%;
+    margin-top: 1vw;
+    color: antiquewhite;
+    
+
+}
+
+.checked {
+    color: orange;
+}
+
+.col {
+    display: inline-block;
+    float: left;
+    margin-right: 5vw;
+}
+footer #data_div{
+    width: 50%;
+    margin: auto;
+}
+
+.feedback {
+    padding-top: 1vw;
+}
+#data_div ul {
+    padding-top: 1vw;
+    list-style-type: none;
+}
+
+
+@media only screen and (max-width: 600px) {
+
+    /*when size reduced to 600px*/
+    div.heading {
+        position: inherit;
+    }
+
+    nav {
+
+        position: inherit;
+        width: 100%;
+    }
+
+    .Wrapper {
+        margin-top: 1vw;
+    }
+
+    .Wrapper .main {
+        margin-left: 1vw;
+        width: 84%;
+    }
+
+    footer {
+        width: 100%;
+        margin-left: 1vw;
+        margin-right: 1vw;
+    }
+}

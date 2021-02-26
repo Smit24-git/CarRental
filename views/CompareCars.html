@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Compare Cars</title>
+<!--    View port design-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!--    header matadata description-->
+    <meta name="description" content="Compare Cars To Find Your Best Drive.">
+    <meta name="keywords" content="Cars, Rent, Old, Used, travel, long drive, drive,compare">
+    <meta name="author" content="Smit Shah">
+<!--    stylesheet for star review-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<!--    common layout which is being used in all pages as a layout-->
+    <link rel="stylesheet" href="../stylesheets/layout.css" />
+<!--    design for current page-->
+    <link rel="stylesheet" href="../stylesheets/comparecars.css" />
+    <script src="../js/setdata.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    
+    <script src="../jQuery/loginSignupjQuery.js"></script>
+</head>
+
+<body>
+<!--    top heading-->
+    <div class="heading">
+        <img src="../images/logo.PNG">
+<!--        Heading top left-->
+        <header>CarsWorld.com</header>
+        <div class="login-main">
+            <button class="login-button">Login</button>
+<!--            sub menu popup on hover-->
+            <div class="login-sub">
+                <a id="login" href="Login.html">Login</a>
+                <a id="signup" href="Signup.html">Sign Up</a>
+                <a id="logout" href="">Log Out</a>
+            </div>
+        </div>
+    </div>
+<!--    navigation-->
+   <nav>
+        <div >
+            <img src="../images/home.png" />
+            <a href="Index.html">Home</a>
+        </div>
+        <div>
+            <img src="../images/view.jpg" />
+            <a href="ViewCarCollection.html">View Car Collection</a>
+        </div>
+        <div class="active">
+            <img src="../images/compare.png" />
+            <a href="CompareCars.html">Compare Cars</a>    
+        </div>
+        <div>
+            <img src="../images/rent.png" />
+            <a href="RentACar.html">Rent a Car</a>
+        </div>
+<!--
+        <div>
+            <img src="../images/visit1.png"/>
+            <a href="">Visit Us</a>
+        </div>
+-->
+          <div>
+            <img src="../images/visit1.png"/>
+            <a href="DrivingTest.html">Driving Test [Required]</a>
+        </div>
+        
+<!--
+        <hr>
+        <center><b>Admin</b></center>
+        <hr>
+        <div>
+            <img src="../images/add.png"/>
+            <a href="">Add Car</a>
+        </div>
+        <div>
+            <img src="../images/update.png" />
+            <a href="">Update Car Collection</a>
+        </div>
+        
+-->
+    </nav>
+    
+<!--    wrapper contains main and aside-->
+    <div class="Wrapper">
+<!--        Main contains main body elements-->
+        <div class="main">
+            <h1>Car Comparison</h1>
+<!--            contains List of cars-->
+            <div class="carList">
+<!--           car-->
+                
+            </div>
+<!--            contains 2 cars information div-->
+            <div class="compareWindow">
+<!--                car1 detail div-->
+                <div class="compareCar">
+                    <header>
+                        <h3>Suzuki Swift</h3> </header>
+                        <img src="../images/cars/swift_maruti.webp" alt="Unsplashed Random" />
+
+                        <!--                        <img src="../images/cars/swift_maruti.webp" /><br>-->
+                        <table>
+                            <tr>
+                                <th>Milage(upto):</th>
+                                <td class="green">21.21 kmpl</td>
+                            </tr>
+                            <tr>
+                                <th>Engine(upto):</th>
+                                <td class="red">1197 cc</td>
+                            </tr>
+                            <tr>
+                                <th>BHP:</th>
+                                <td class="red">81.8</td>
+                            </tr>
+                            <tr>
+                                <th>Transmission:</th>
+                                <td>Manual/Automatic</td>
+                            </tr>
+                            <tr>
+                                <th>Seats:</th>
+                                <td>5</td>
+                            </tr>
+                            <tr>
+                                <th>Rent Per Hour:</th>
+                                <td class="green">15$</td>
+                            </tr>
+
+                        </table>
+                </div>
+<!--                >> in between 2 car comperision divisions-->
+                <div style="height: 100%;width: 100%; margin: auto;display: flex;justify-content: center;
+                            align-items: center;"><label style="padding-top:50%"> >> </label></div>
+<!--                car2 comparision-->
+                <div class="compareCar">
+                    <header>
+                        <h3>Audi A6</h3> </header>
+                        <img src="../images/cars/AudiA6.jpg" alt="Unsplashed Random" />
+
+                        <!--                        <img src="../images/cars/swift_maruti.webp" /><br>-->
+                        <table>
+                            <tr>
+                                <th>Milage(upto):</th>
+                                <td class="red">20 kmpl</td>
+                            </tr>
+                            <tr>
+                                <th>Engine(upto):</th>
+                                <td class="green">1300 cc</td>
+                            </tr>
+                            <tr>
+                                <th>BHP:</th>
+                                <td class="green">85.8</td>
+                            </tr>
+                            <tr>
+                                <th>Transmission:</th>
+                                <td>Automatic</td>
+                            </tr>
+                            <tr>
+                                <th>Seats:</th>
+                                <td>5</td>
+                            </tr>
+                            <tr>
+                                <th>Rent Per Hour:</th>
+                                <td class="red">19$</td>
+                            </tr>
+
+                        </table>
+                </div>
+            </div>
+        </div>
+<!--        aside for advt.-->
+        <aside>
+            <img src="../images/advt/adv1.gif" /><img src="../images/advt/banneradvt2.jpg" />
+        </aside>
+
+    </div>
+<!--    footer-->
+    <footer>
+<!--        contains footer data divisions-->
+        <div id="data_div">
+<!--            division for contact us info-->
+            <div class="col">
+                <ul>
+                    <caption>Contact Us:</caption>
+                    <li>1800 200 300</li>
+                    <li>carsworld@gmail.com</li>
+                    <li>twitter/143235</li>
+                </ul>
+            </div>
+<!--            div to show feedback-->
+            <div class="col feedback">
+                <h3>Feedbacks:</h3>
+
+                <span class="fa fa-star checked" ></span>
+                <span class="fa fa-star checked" ></span>
+                <span class="fa fa-star checked" ></span>
+                <span class="fa fa-star checked" ></span>
+                <span class="fa fa-star" ></span>
+                <p style="padding: 0px;margin: 0px">28k reviews</p>
+            </div>
+        </div>
+    </footer>
+<!--    set data if not exists-->
+    <script src="../js/setdata.js"></script>
+<!--    script for comparing cars-->
+    <script src="../js/CompareCars.js"></script>
+    
+    
+</body>
+
+    
+
+</html>

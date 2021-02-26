@@ -1,0 +1,61 @@
+input[type="text"],
+input[type="password"] {
+
+    background-color: whitesmoke;
+    height: 2vw;
+    border-radius: 0.4vw;
+    margin: 1vw 0.5vw;
+    width: 13vw;
+    border-style: inherit;
+    padding-left: 1vw;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus {
+    background-color: white;
+/*    filter: blur(5px);*/
+}
+
+
+input[type="text"]:hover,
+input[type="email"]:hover,
+input[type="password"]:hover {
+    background-color: white;
+
+}
+
+input[type="submit"] {
+    margin: 1vw 2vw;
+    width: 10vw;
+    height: 2.2vw;
+    font-size: 1.2vw;
+    border-radius: 0.7vw;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    /*shadowing layout*/
+}
+
+input[type="submit"]:hover {
+
+    box-shadow: none;
+    /*removes shadowing*/
+}
+
+.loginWindow h1 {
+    text-decoration: underline;
+    /*underline the text*/
+    font-family: cursive;
+
+}
+
+.loginWindow {
+/*    margin-top: 10%;*/
+    display: inline-block;
+    padding: 1vw 4vw;
+    position: relative;
+    background-color: burlywood;
+    font-family: monospace;
+    border-radius: 3vw;
+    z-index: 2;
+/*    display: none;*/
+}

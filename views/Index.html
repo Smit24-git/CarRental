@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>CarsWorld.com</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="About Cars World Company.">
+    <meta name="keywords" content="Cars, Rent, Old, Used, travel, long drive, drive">
+    <meta name="author" content="Smit Shah">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<!--    common layout css for all view-->
+    <link rel="stylesheet" href="../stylesheets/layout.css" />
+<!--    css for this page-->
+    <link rel="stylesheet" href="../stylesheets/index.css"/>
+<!--    cdn for jquery-->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<!--adding car information in localstorage-->
+    <script src="../js/setdata.js"></script>
+<!--    jquery for checking user has logged in or not-->
+    <script src="../jQuery/loginSignupjQuery.js"></script>
+    <script>
+        //event on page load
+        $(document).ready(function(){
+            //slide down to all images presented in the last table of main div
+            $(".main").find("table").last().find("img").slideDown(3000);
+        });
+    </script>
+</head>
+
+<body>
+<!--    heading div displaying heading with login sign up functionality-->
+    <div class="heading">
+        <img src="../images/logo.PNG">
+        <header>CarsWorld.com</header>
+        <div class="login-main">
+            <button class="login-button">Login</button>
+            <div class="login-sub">
+                <a id="login" href="Login.html">Login</a>
+                <a id="signup" href="Signup.html">Sign Up</a>
+                <a id="logout" href="">Log Out</a>
+            </div>
+        </div>
+    </div>
+<!--    left navigation pane-->
+    <nav>
+        <div class="active">
+            <img src="../images/home.png" />
+            <a href="Index.html">Home</a>
+        </div>
+        <div>
+            <img src="../images/view.jpg" />
+            <a href="ViewCarCollection.html">View Car Collection</a>
+        </div>
+        <div>
+            <img src="../images/compare.png" />
+            <a href="CompareCars.html">Compare Cars</a>    
+        </div>
+        <div>
+            <img src="../images/rent.png" />
+            <a href="RentACar.html">Rent a Car</a>
+        </div>
+<!--
+        <div>
+            <img src="../images/visit1.png"/>
+            <a href="">Visit Us</a>
+        </div>
+-->
+        <div>
+            <img src="../images/visit1.png"/>
+            <a href="DrivingTest.html">Driving Test [Required]</a>
+        </div>
+        
+        
+<!--
+        <hr>
+        <center><b>Admin</b></center>
+        <hr>
+        <div>
+            <img src="../images/add.png"/>
+            <a href="">Add Car</a>
+        </div>
+        <div>
+            <img src="../images/update.png" />
+            <a href="">Update Car Collection</a>
+        </div>
+-->
+        
+    </nav>
+<!--    wrapper contains main and aside-->
+    <div class="Wrapper">
+<!--        Main contains main body elements-->
+        <div class="main">
+            <p style="font-size: 2vw;text-align: center;">The best place to rent a car you'd love to Drive...</p>
+            <p><b><q>We focus on providing comfort to your journey in a cheaper rate.</q></b></p>
+            <div class="best">
+                <header>
+                    <h3><ins>Our Best Rented Car of the month</ins></h3>
+                </header>
+                <div class="car">
+                    <div class="front"><!--Front side of car-->
+                        <img src="../images/cars/swift_maruti.webp" />
+                    </div>
+                    <div class="back"><!--backside of car with info-->
+                        <header>
+                            <h3>Mariuti Swift</h3>
+                        </header>
+
+                        <table>
+                            <tr>
+                                <th>Milage(upto):</th>
+                                <td>21.21 kmpl</td>
+                            </tr>
+                            <tr>
+                                <th>Engine(upto):</th>
+                                <td>1197 cc</td>
+                            </tr>
+                            <tr>
+                                <th>BHP:</th>
+                                <td>81.8</td>
+                            </tr>
+                            <tr>
+                                <th>Transmission:</th>
+                                <td>Manual/Automatic</td>
+                            </tr>
+                            <tr>
+                                <th>Seats:</th>
+                                <td>5</td>
+                            </tr>
+
+                        </table>
+                    </div>
+
+                </div>
+                <div class="car">
+<!--                    front side of the card having image-->
+                    <div class="front">
+                        <img src="../images/cars/CadillacXTS.jpg" />
+                    </div>
+<!--                    back side of the card having details of the card-->
+                    <div class="back">
+                        <header>
+                            <h3>Cadillac XTS</h3>
+                        </header>
+
+                        <table>
+                            <tr>
+                                <th>Milage(upto):</th>
+                                <td>15 kmpl</td>
+                            </tr>
+                            <tr>
+                                <th>Engine(upto):</th>
+                                <td>2500 cc</td>
+                            </tr>
+                            <tr>
+                                <th>BHP:</th>
+                                <td>81.8</td>
+                            </tr>
+                            <tr>
+                                <th>Transmission:</th>
+                                <td>Automatic</td>
+                            </tr>
+                            <tr>
+                                <th>Seats:</th>
+                                <td>5</td>
+                            </tr>
+
+                        </table>
+                    </div>
+
+                </div>
+                
+            </div>
+
+            <h2>Brands</h2>
+<!--            table containing images of brands-->
+            <table>
+                <tr>
+                    <td><img style="display: none" src="../images/car_logo/FAVPNG_suzuki-car-ford-motor-company-logo_sH4ebrwz.png" /></td>
+                    <td><img style="display: none" src="../images/car_logo/FAVPNG_toyota-car-company-logo-corporation_rUjgWS9z.png" /></td>
+                    <td><img style="display: none" src="../images/car_logo/ford-logo-2003.png" /></td>
+                    <td><img style="display: none" src="../images/car_logo/hyundai-auto-logo-2000.png" /></td>
+                </tr>
+                <tr>
+                    <td><img style="display: none" src="../images/car_logo/kissclipart-chevrolet-png-clipart-chevrolet-car-logo-100053d33286cc7a.png" /></td>
+                    <td><img style="display: none" src="../images/car_logo/pngwing.com.png" /></td>
+                    <td><img style="display: none" src="../images/car_logo/tesla-tesla-car-logos-and-tesla-car-company-logos-worldwide-400532.png" /></td>
+                    <td><img style="display: none" src="../images/car_logo/volvo-car-logo-png-brand-image-20.png" /></td>
+                </tr>
+            </table>
+            <p>Our company is founded in 2015, successfully running with the help of 5000 staff and 210,000 happy customers.</p>
+        </div>
+        <aside>
+<!--            advertise image-->
+            <img src="../images/advt/adv1.gif" />
+        </aside>
+    </div>
+<!--    footer-->
+    <footer>
+        <div id="data_div">
+            <div class="col">
+                <ul>
+                    <caption>Contact Us:</caption>
+                    <li>1800 200 300</li>
+                    <li>carsworlds@gmail.com</li>
+                    <li>twitter/143235</li>
+                </ul>
+            </div>
+            <div class="col feedback">
+                <h3>Feedbacks:</h3>
+<!--                rating stylesheet imported from cloudflair.com-->
+                <span class="fa fa-star checked" ></span>
+                <span class="fa fa-star checked" ></span>
+                <span class="fa fa-star checked" ></span>
+                <span class="fa fa-star checked" ></span>
+                <span class="fa fa-star" ></span>
+                <p style="padding: 0px;margin: 0px">28k reviews</p>
+            </div>
+        </div>
+    </footer>
+</body>
+
+
+</html>
